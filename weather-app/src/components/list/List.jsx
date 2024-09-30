@@ -69,7 +69,7 @@ const List = () => {
 									<p className="list__item--temp">
 										{Math.floor(report.temperature)}°
 									</p>
-									<img className='list__item--icon' src={`./src/assets/icons/${report.icon}.svg`} alt={report.description} />
+									<img className='list__item--icon' src={`/${report.icon}.svg`} alt={report.description} />
 								</div>
 							</li>
 						))}
