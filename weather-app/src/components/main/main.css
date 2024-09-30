@@ -70,6 +70,7 @@
 }
 
 .weather__form input {
+    font-size: 16px;
     margin-top: 12px;
     padding: 0 12px;
     height: 44px;
