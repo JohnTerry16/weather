@@ -1,0 +1,135 @@
+.list {
+    background: linear-gradient(180deg, #BCE8FF 0%, #FFF 41.26%);
+    padding: 16px;
+    min-height: 100dvh;
+}
+
+.list__header {
+    padding: 10px 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.back__link {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.list__title {
+    color: #121212;
+    text-align: center;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%;
+}
+
+.list__wrapper {
+    margin-top: 16px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+}
+
+.list__item {
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 8px;
+    background: #F2F6FF;
+}
+
+.list__item--right {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.list__item--icon {
+    display: block;
+    max-width: 50px;
+    width: 100%;
+}
+
+.list__item--temp {
+    color: #1C242B;
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+}
+
+.list__item--left {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.list__item--city {
+    color: #000;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+}
+
+.list__item--descr {
+    color: #000;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+.slide-in {
+    animation: slide-in 0.5s ease-in;
+}
+
+.no-weather {
+    padding: 16px 0;
+    color: #1C242B;
+    text-align: center;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%;
+}
+
+@keyframes slide-in {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@media(min-width: 768px) {
+    .list__inner {
+        padding: 40px;
+        margin: 0 auto;
+        max-width: 1160px;
+        width: 100%;
+    }
+
+    .list__wrapper {
+        margin-top: 34px;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .list__header {
+        justify-content: flex-start;
+        padding-left: 88px;
+    }
+
+    .back__link {
+        padding: 0 20px;
+    }
+}
