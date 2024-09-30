@@ -20,7 +20,7 @@ const List = () => {
 
 	const getLastReports = async () => {
 		try {
-			const response = await axios.get('http://localhost:3000/weather/last-reports');
+			const response = await axios.get(`https://weather-m0vk.onrender.com/weather/last-reports`);
 			setReports(response.data);
 
 			localStorage.setItem('lastWeatherReports', JSON.stringify(response.data));

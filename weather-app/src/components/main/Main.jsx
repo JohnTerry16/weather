@@ -34,7 +34,7 @@ function Main() {
 
     const getLatestWeather = async () => {
         try {
-            const response = await axios.get('http://localhost:3000/weather/latest');
+            const response = await axios.get(`https://weather-m0vk.onrender.com/weather/latest`);
             setWeather(response.data);
 
             localStorage.setItem('latestWeather', JSON.stringify(response.data));
@@ -45,7 +45,7 @@ function Main() {
 
     const getWeather = async () => {
         try {
-            const response = await axios.get(`http://localhost:3000/weather?city=${city}`);
+            const response = await axios.get(`https://weather-m0vk.onrender.com/weather?city=${city}`);
             setWeather(response.data);
 
             localStorage.setItem('latestWeather', JSON.stringify(response.data));
@@ -92,7 +92,7 @@ function Main() {
                             {iconUrl && <img className='weather__icon' src={iconUrl} alt={weather.description} />}
                             <h2 className='weather__title'>{weather.city}</h2>
                             <p className='weather__temp'>{Math.floor(weather.temperature)}°</p>
-                            <p className='weather__descr'>{weather.description.charAt(0).toUpperCase() + weather.description.slice(1)}</p>
+                            {/* <p className='weather__descr'>{weather.description.charAt(0).toUpperCase() + weather.description.slice(1)}</p> */}
                         </>
                     ) : (
                         <p className='no-weather'>
