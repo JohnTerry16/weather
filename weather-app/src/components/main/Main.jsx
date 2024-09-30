@@ -74,7 +74,7 @@ function Main() {
     }, [isAnimating]);
 
     const iconUrl = weather && weather.icon
-        ? `./src/assets/icons/${weather.icon}.svg`
+        ? `/${weather.icon}.svg`
         : '';
 
     return (
